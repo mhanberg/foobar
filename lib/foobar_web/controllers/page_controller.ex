@@ -1,7 +1,9 @@
 defmodule FoobarWeb.PageController do
   use FoobarWeb, :controller
 
-  def index(conn, _params) do
-    render(conn, "index.html")
+  def index(conn, params) do
+    conn
+    |> put_layout(Map.get(params, "layout", "app") <> ".html")
+    |> render("index.html")
   end
 end

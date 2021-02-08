@@ -10,8 +10,8 @@
   </head>
   <body>
     <header>
-      APP 
-      <div><a href="<%= Routes.page_path(@conn, :index, layout: "app2") %>">Switch to app2 layout</a></div>
+      APP2
+      <div><a href="<%= Routes.page_path(@conn, :index, layout: "app") %>">Switch to app layout</a></div>
     </header>
     <main role="main" class="container">
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
